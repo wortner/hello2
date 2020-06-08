@@ -19,7 +19,7 @@ spec:
         runAsNonRoot: false     # Make sure container images do not use root
       containers:
       - name: hello2
-        image: msftwortneracr.azurecr.io/hello2:latest   # Best practice - always define specific tag, do not rely on latest
+        image: msftwortneracr.azurecr.io/hello2:bbff55da1ae6267907c1fc2d022a7e9c8e21c92d   # Best practice - always define specific tag, do not rely on latest
         imagePullPolicy: Always    # Best practice for security - user will no access to image might get it from local cache
         ports:  # We cannot run on ports <1024 because that would require root
         - containerPort: 3000
