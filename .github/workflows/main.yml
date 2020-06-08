@@ -22,5 +22,5 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/hello2:${{ github.sha }}
+            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/hello2:${{ github.sha }} --build-arg INSTRUMENTATION_KEY=c7e1bb29-fbed-4189-9d95-4b8a7b2ed9b9
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/hello2:${{ github.sha }}
