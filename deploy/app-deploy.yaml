@@ -25,7 +25,7 @@ spec:
         - containerPort: 3000
         resources:    # Best practice for stability
           limits:    # Always limit resources to keep nodes healthy (eg. prevent memory leak to hurt other containers)
-            cpu: 200m
+            cpu: 100m
             memory: 128Mi
           requests:     # Always define request so scheduler can decide better about placements (required for node autoscaling)
             cpu: 100m
